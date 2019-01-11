@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0A0092F821E74208008F68E8 /* NSString+Supplement.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A0092F721E74208008F68E8 /* NSString+Supplement.m */; };
 		0A2E1DD521240C01000A16A3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A2E1DD421240C01000A16A3 /* AppDelegate.m */; };
 		0A2E1DD821240C01000A16A3 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A2E1DD721240C01000A16A3 /* ViewController.m */; };
 		0A2E1DDB21240C01000A16A3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A2E1DD921240C01000A16A3 /* Main.storyboard */; };
@@ -15,6 +16,8 @@
 		0A2E1DE321240C02000A16A3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A2E1DE221240C02000A16A3 /* main.m */; };
 		0A2E1DED21240C02000A16A3 /* ______Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A2E1DEC21240C02000A16A3 /* ______Tests.m */; };
 		0A2E1DF821240C02000A16A3 /* ______UITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A2E1DF721240C02000A16A3 /* ______UITests.m */; };
+		0A320F7121E71E13003D146A /* UIImageView+Supplement.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A320F7021E71E13003D146A /* UIImageView+Supplement.m */; };
+		0A3211F321E849DB002C0964 /* NSMutableAttributedString+Supplement.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A3211F221E849DB002C0964 /* NSMutableAttributedString+Supplement.m */; };
 		0A39593821250D24003A0C43 /* UIView+Supplement.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A39593721250D24003A0C43 /* UIView+Supplement.m */; };
 		0A39593B21250D65003A0C43 /* UILabel+Supplement.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A39593A21250D65003A0C43 /* UILabel+Supplement.m */; };
 		0A39593E21250D7B003A0C43 /* UIButton+Supplement.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A39593D21250D7B003A0C43 /* UIButton+Supplement.m */; };
@@ -40,6 +43,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0A0092F621E74208008F68E8 /* NSString+Supplement.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+Supplement.h"; sourceTree = "<group>"; };
+		0A0092F721E74208008F68E8 /* NSString+Supplement.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+Supplement.m"; sourceTree = "<group>"; };
 		0A2E1DD021240C01000A16A3 /* 开发常用分类.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "开发常用分类.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A2E1DD321240C01000A16A3 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		0A2E1DD421240C01000A16A3 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -56,6 +61,10 @@
 		0A2E1DF321240C02000A16A3 /* 开发常用分类UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "开发常用分类UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A2E1DF721240C02000A16A3 /* ______UITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "______UITests.m"; sourceTree = "<group>"; };
 		0A2E1DF921240C02000A16A3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0A320F6F21E71E13003D146A /* UIImageView+Supplement.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImageView+Supplement.h"; sourceTree = "<group>"; };
+		0A320F7021E71E13003D146A /* UIImageView+Supplement.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+Supplement.m"; sourceTree = "<group>"; };
+		0A3211F121E849DB002C0964 /* NSMutableAttributedString+Supplement.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSMutableAttributedString+Supplement.h"; sourceTree = "<group>"; };
+		0A3211F221E849DB002C0964 /* NSMutableAttributedString+Supplement.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSMutableAttributedString+Supplement.m"; sourceTree = "<group>"; };
 		0A39593621250D24003A0C43 /* UIView+Supplement.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+Supplement.h"; sourceTree = "<group>"; };
 		0A39593721250D24003A0C43 /* UIView+Supplement.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+Supplement.m"; sourceTree = "<group>"; };
 		0A39593921250D65003A0C43 /* UILabel+Supplement.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UILabel+Supplement.h"; sourceTree = "<group>"; };
@@ -159,8 +168,14 @@
 				0A39593D21250D7B003A0C43 /* UIButton+Supplement.m */,
 				0A39593F21250DA2003A0C43 /* UIImage+Supplement.h */,
 				0A39594021250DA2003A0C43 /* UIImage+Supplement.m */,
+				0A320F6F21E71E13003D146A /* UIImageView+Supplement.h */,
+				0A320F7021E71E13003D146A /* UIImageView+Supplement.m */,
 				0A39594221250DB2003A0C43 /* UIColor+Supplement.h */,
 				0A39594321250DB2003A0C43 /* UIColor+Supplement.m */,
+				0A0092F621E74208008F68E8 /* NSString+Supplement.h */,
+				0A0092F721E74208008F68E8 /* NSString+Supplement.m */,
+				0A3211F121E849DB002C0964 /* NSMutableAttributedString+Supplement.h */,
+				0A3211F221E849DB002C0964 /* NSMutableAttributedString+Supplement.m */,
 			);
 			path = Categories;
 			sourceTree = "<group>";
@@ -295,6 +310,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0A3211F321E849DB002C0964 /* NSMutableAttributedString+Supplement.m in Sources */,
+				0A0092F821E74208008F68E8 /* NSString+Supplement.m in Sources */,
+				0A320F7121E71E13003D146A /* UIImageView+Supplement.m in Sources */,
 				0A2E1DD821240C01000A16A3 /* ViewController.m in Sources */,
 				0A2E1DE321240C02000A16A3 /* main.m in Sources */,
 				0A39593E21250D7B003A0C43 /* UIButton+Supplement.m in Sources */,

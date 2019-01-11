@@ -8,12 +8,17 @@
 
 #import "ViewController.h"
 #import "UIImage+Supplement.h"
+#import "UIColor+Supplement.h"
+#import "UIImageView+Supplement.h"
+#import "NSString+Supplement.h"
+#import "NSMutableAttributedString+Supplement.h"
 
 #define screen_width [UIScreen mainScreen].bounds.size.width
 #define screen_height [UIScreen mainScreen].bounds.size.height
 @interface ViewController ()<UIImagePickerControllerDelegate, UINavigationControllerDelegate>
 
 @property (nonatomic, strong) UIImageView *imageView;
+@property (nonatomic, strong) UILabel *label;
 
 @end
 
@@ -21,12 +26,16 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.imageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 100, screen_width, 300)];
-    self.imageView.image = [UIImage imageNamed:@"add"];
+
+
+    self.imageView = [UIImageView imageViewWithImage:[UIImage imageNamed:@"02"] frame:CGRectMake(100, 100, 100, 100)];
+    [self.imageView setFilletedCornerWithRadius:50];
+    
     self.imageView.clipsToBounds = YES;
     self.imageView.contentMode = UIViewContentModeScaleAspectFill;
     self.imageView.userInteractionEnabled = YES;
     [self.view addSubview:self.imageView];
+    NSLog(@"%@",[[UIColor redColor] HEXString]);
     
     
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(addBaseImage)];
@@ -34,16 +43,31 @@
     
     NSMutableParagraphStyle *paragraph = [[NSMutableParagraphStyle alloc] init];
     paragraph.lineSpacing = 5;
-    NSMutableAttributedString *attributeedString = [[NSMutableAttributedString alloc] initWithString:@"孩子安徽覅恢复期货就放弃和恢复期hi会务费附加费航空文化服务卡能否尽快为您附近问你问客服那我就服你文件发你文件您付款文件南方网" attributes:@{NSForegroundColorAttributeName: [UIColor blueColor], NSParagraphStyleAttributeName: paragraph}];
-    [attributeedString addAttribute:NSFontAttributeName value:[UIFont systemFontOfSize:20] range:NSMakeRange(0, 5)];
+    NSMutableAttributedString *attributedString = [[NSMutableAttributedString alloc] initWithString:@"孩子安徽覅恢复期货就放弃和恢复期hi会务费附加费航空文化服务卡能否尽快为您附近问你问客服那我就服你文件发你文件您付款文件南方网恢复期货就放弃和恢复期hi会务费附加费航空文化服务卡能否尽快为您附近问你问客服那我就服你文件发你文件您付款文件南方网" attributes:@{NSForegroundColorAttributeName: [UIColor colorWithHexString:@"ff0000"],NSFontAttributeName: [UIFont systemFontOfSize:15], NSParagraphStyleAttributeName: paragraph}];
+    [attributedString addAttribute:NSFontAttributeName value:[UIFont systemFontOfSize:20] range:NSMakeRange(0, 5)];
     CATextLayer *layer = [[CATextLayer alloc] init];
     layer.frame = CGRectMake(0, 500, screen_width, 10);
-    layer.string = attributeedString;
-    layer.bounds = [attributeedString boundingRectWithSize:CGSizeMake(screen_width, MAXFLOAT) options:NSStringDrawingUsesLineFragmentOrigin | NSStringDrawingUsesFontLeading context:nil];
+    layer.string = attributedString;
+    layer.bounds = [attributedString boundingRectWithSize:CGSizeMake(screen_width, MAXFLOAT) options:NSStringDrawingUsesLineFragmentOrigin | NSStringDrawingUsesFontLeading context:nil];
     layer.fontSize = 15;
     layer.wrapped = YES;
     layer.truncationMode = kCATruncationEnd;
+    layer.contentsScale = [[UIScreen mainScreen] scale];
     [self.view.layer addSublayer:layer];
+    
+    self.label = [[UILabel alloc] initWithFrame:CGRectMake(0, 600, screen_width, 100)];
+    self.label.numberOfLines = 0;
+    self.label.backgroundColor = [[UIColor colorWithHexString:@"ff0000"] translucentColor];
+    NSDictionary *dic = @{
+                          @"marker":@{@"font":[UIFont systemFontOfSize:20], @"color": [UIColor greenColor], @"text":@"hello"},
+                          @"body":@{@"font":[UIFont systemFontOfSize:12], @"color":[UIColor redColor]}
+                          };
+    self.label.attributedText = [NSMutableAttributedString attributeWithDic:dic string:@"hello和覅无回复无回复我凤凰网结尾鸡尾酒分开交罚款京津冀平均欧赔键盘就离开普及破解欧派奇偶奇偶奇偶军坡节噢迫击炮建瓯盘奇偶平均欧赔奖品奖品奖品奖品家平均欧赔键盘"];
+    [self.view addSubview:self.label];
+    
+    NSString *string = @"helloworld";
+    NSRange range = [string rangeOfString:@"world"];
+    NSLog(@"%@",[string substringWithRange:range]);
 }
 
 - (void)addBaseImage {
