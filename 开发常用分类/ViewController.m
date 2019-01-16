@@ -92,13 +92,16 @@
         // 展示选取照片控制器
         [self presentViewController:imagePickerController animated:YES completion:^{}];
     }];
+    [cameraAction setValue:[UIColor blackColor] forKey:@"titleTextColor"];
     UIAlertAction *photosAction = [UIAlertAction actionWithTitle:@"从相册选择" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
         imagePickerController.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
         [self presentViewController:imagePickerController animated:YES completion:^{}];
     }];
+    [photosAction setValue:[UIColor blackColor] forKey:@"titleTextColor"];
     UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
         
     }];
+    [cancelAction setValue:[UIColor redColor] forKey:@"titleTextColor"];
     // 判断是否支持相机
     if([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]) {
         // 添加警告按钮

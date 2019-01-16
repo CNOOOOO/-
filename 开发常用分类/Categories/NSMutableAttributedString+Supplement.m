@@ -18,9 +18,9 @@
     for (NSString *key in [dic allKeys]) {
         if ([key isEqualToString:@"body"]) {//主体
             for (NSString *subKey in dic[key]) {
-                if ([subKey isEqualToString:@"font"]) {
+                if ([subKey isEqualToString:@"font"]) {//字体
                     bodyFont = dic[key][subKey];
-                }else if ([subKey isEqualToString:@"color"]) {
+                }else if ([subKey isEqualToString:@"color"]) {//颜色
                     bodyColor = dic[key][subKey];
                 }
             }
