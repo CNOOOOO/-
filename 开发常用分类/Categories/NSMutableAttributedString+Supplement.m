@@ -4,7 +4,7 @@
 //
 //  Created by Mac2 on 2019/1/11.
 //  Copyright © 2019年 Mac2. All rights reserved.
-//
+//////
 
 #import "NSMutableAttributedString+Supplement.h"
 #import <UIKit/UIKit.h>
